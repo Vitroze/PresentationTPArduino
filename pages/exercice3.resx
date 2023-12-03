@@ -1,0 +1,73 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="sText.Text" xml:space="preserve">
+    <value>Après avoir pris connaissance avec la documentation fournie et les exemples sur le GitHub, nous pourrons commencer à l’utiliser. Tout d’abord, pour pouvoir utiliser cette librairie, nous devrons mettre 3 lignes indispensables qui sont :
+#include &lt;wire.h&gt;
+#include &lt;rgb_lcd.h&gt; 
+Elle permet de déclarer la librairie qu’on a installée sur notre carte Arduino (dans ce cas-là, nous utiliserons Proteus pour simuler cette carte). La dernière ligne que nous avons besoin est de maintenant déclarer l’instance ou l’objet qu’on utilisera 
+rgb_lcd lcd;
+
+Elle permettra d’utiliser toutes les fonctions associées à cette librairie en mettant avant le point le nom de notre variable. Par exemple lcd.print("Test"); afficher Test sur l’écran LCD. Après avoir introduit la librairie, passons maintenant à l’exercice. Pour ce cas, nous aurons besoin d’utiliser uniquement la fonction setup. A noter que la fonction loop doit être obligatoirement présente, même on ne l’utilise pas. Nous allons d’abord initialiser l’afficheur avec 16 colonnes et deux lignes avec la fonction lcd.begin(16, 2); Puis nous allons définir sur quelle ligne on veut écrire dans notre cas, cela sera à la ligne 0 et pour le centrer nous allons mettre 2 grâce à la fonction lcd.setCursor(2, 0);
+Ainsi, nous pouvons mettre notre premier texte qui est sur la ligne « Gestion d’un » en utilisant lcd.print puis nous changeons ligne toujours avec la même fonction lcd.setCursor cette fois, nous modifions l’argument 0 en 1 pour sauter la ligne et nous mettrons « Afficheur LCD ». Nous avons terminé notre programmation
+
+A noter que les lcd.cursor(); ne sont pas du tout obligatoire. Ces fonctions sont juste des tests pour moi que j'ai oublier de l'enlever durant ces captures d'écrans
+</value>
+  </data>
+</root>

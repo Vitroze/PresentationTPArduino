@@ -1,0 +1,71 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="sText.Text" xml:space="preserve">
+    <value>Dans un premier temps, nous allons créer le circuit Arduino. 
+Pour cela, nous allons prendre dans la liste d'objets disponibles la "plaque" (je n'ai pas le nom complet suite à un problème lié au site internet "Tinkercad". Après avoir posé la plaque sur notre plan de travail, nous devons ainsi poser la résistance configurée sur 100 oméga et une île. Après cela, nous allons commencer le branchement depuis la sortie 10. Nous allons connecter la sortie 10 à la résistance, puis la résistance à la LED enfin à "TERRE" où se termine notre circuit sur la carte Arduino
+
+Dans la fonction setup(), exécutée une seule fois au démarrage du programme, la broche 10 est configurée en sortie avec la commande pinMode(10, OUTPUT);. Cela indique à l'Arduino que la broche 10 sera utilisée pour envoyer des signaux de sortie.
+La fonction loop(), exécutée en boucle après la phase de configuration initiale, contrôle l'état de la broche 10 pour allumer et éteindre la lampe connectée.
+À l'intérieur de la boucle, digitalWrite(10, HIGH); envoie un signal "HIGH" à la broche 10, ce qui allume la lampe connectée à cette broche. Ensuite, il y a une pause de 1 seconde (delay(1000);), pendant laquelle la lampe reste allumée.
+Ensuite, digitalWrite(10, LOW); envoie un signal "LOW" à la broche 10, éteignant ainsi la lampe. Encore une fois, il y a une pause de 1 seconde (delay(1000);), pendant laquelle la lampe reste éteinte.
+Ce programme se répète continuellement puisqu’il est présent dans la fonction loop : la lampe s'allume pendant une seconde, s'éteint pendant une seconde, puis le cycle se répète, créant ainsi un clignotement régulier de la lampe connectée à la broche 10 de l'Arduino.
+</value>
+  </data>
+</root>

@@ -1,0 +1,67 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="sText.Text" xml:space="preserve">
+    <value>Dans la fonction setup(), qui est exécutée une seule fois au démarrage du programme, le code configure les 4 premières broches du port B (broches 8 à 11 sur Arduino Uno) comme des sorties. Cela est indiqué par DDRB = B00001111;. En binaire, cela signifie que les 4 premières broches (de droite à gauche) sont configurées en sortie (1 signifie sortie, 0 signifie entrée).
+La fonction loop() est exécutée en boucle après la phase de configuration initiale. À l'intérieur de cette boucle, il y a une structure de contrôle appelée for qui commence avec iCount (une variable) initialisée à 0. Cette boucle est conçue pour compter de 0 à 9 inclus.
+À chaque itération de la boucle for, la valeur actuelle de iCount est écrite sur les broches configurées précédemment (PORTB = iCount;). Cela signifie que le nombre représenté par iCount est envoyé aux broches de sortie de l'Arduino. Ensuite, le programme attend pendant une seconde (delay(1000);) avant d'incrémenter iCount de 1.
+Lorsque iCount atteint la valeur 9, une vérification if (iCount == 9) est effectuée. Si cette condition est vraie, le programme réinitialise iCount à 0. Cela signifie qu'après avoir affiché 9, le compteur retourne à 0 et recommence à compter, créant ainsi une boucle continue de 0 à 9 sur les broches de sortie de l'Arduino.
+</value>
+  </data>
+</root>
